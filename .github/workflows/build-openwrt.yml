@@ -81,10 +81,6 @@ jobs:
         cd $GITHUB_WORKSPACE
         ls -d */
 
-    - name: DIY1(一般用于安装依赖和插件)
-      working-directory: ./openwrt
-      run: |
-        [ -e $GITHUB_WORKSPACE/$DIY1 ] && echo '有提供DIY1，将开始DIY' && chmod +x $GITHUB_WORKSPACE/$DIY1 && $GITHUB_WORKSPACE/$DIY1
 
     - name: 安装并更新资源
       working-directory: ./openwrt
@@ -97,9 +93,6 @@ jobs:
       run: |
         [ -e $GITHUB_WORKSPACE/$CONFIG_FILE ] && echo '有提供配置，将使用用户提供的配置安装依赖和插件' && mv $GITHUB_WORKSPACE/$CONFIG_FILE openwrt/.config
 
-    - name: DIY2（一般用于ip和样式等）
-      run: |
-        [ -e $GITHUB_WORKSPACE/$DIY2 ] && echo '有提供DIY2，将开始DIY' && chmod +x $GITHUB_WORKSPACE/$DIY2 && $GITHUB_WORKSPACE/$DIY2
 
     - name: 生成配置
       working-directory: ./openwrt
