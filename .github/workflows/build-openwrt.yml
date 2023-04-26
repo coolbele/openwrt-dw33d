@@ -22,7 +22,7 @@ on:
 env:
   REPO_URL: https://github.com/HiGarfield/lede-17.01.4-Mod
   REPO_BRANCH: master
-  CONFIG_FILE: config/x86.config
+  CONFIG_FILE: .config
   DIY1: shell/diy-by-packages.sh
   DIY2: shell/diy-by-config.sh
   TZ: Asia/Shanghai
